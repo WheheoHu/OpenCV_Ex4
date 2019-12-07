@@ -9,9 +9,14 @@ int main() {
 	imshow("test", src_img);
 	Mat gray_img;
 	cvtColor(src_img, gray_img, COLOR_RGB2GRAY);
+	
+
 	//Mat sobel_img = Sharpen(gray_img).Sobel();
+	//imshow("sobel_my", sobel_img);
+
 	Mat sobel_cv_img;
 	Sobel(gray_img,sobel_cv_img,-1,1,1);
 	imshow("sobel", sobel_cv_img);
+	
 	waitKey();
 }
